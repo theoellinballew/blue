@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #whole {
+                width: 30vw; 
+                top: 30vh; 
+                left: 35vw; 
+                position: fixed; 
+                text-align: justify;
+            }
+        </style>
+    </head>
+    <body   onload=flip()>
+
+      
+
+        <script>
+            const c_grand = ["grand stuck", "holy thick", "rounded and hurt", "tired", "grown-up", "temporary", "love-bombing", "interested", "unnamed and wretched", "sad and sunken", "soft and salted", "mid-night"]
+            const c_bird = ["holy bird", "(foaming) drink", "(holy) milk", "(preaching) gut", "credit line", "(fuller) gut", "blue-light-resistant glass pane", "headphone", "(fucked) brain", "gluten-free heart"]
+            const c_go = ["go", "slip off to", "fill itself", "reach its inner light", "get so uptight", "suck on its ginger", "dry out its skin", "inspire masses", "fold its hands", "run through the grasses", "read into our hearts"]
+            const c_riled = ["riled up", "sold", "sent out", "tucked away", "skimmed", "graphed", "overturned", "translated", "inserted ourselves into", "crowned", "looked into the heart of"]
+            const c_mutters = ["muttered words", "silent goals", "webs", "knitted loves", "hot hot drinks", "inner fuzz", "water-filled glove", "flipped horizon", "eyes", "hairline"]
+            const c_goats = ["spoiled gold", "fingers", "sodas", "blue cups", "souls", "memories", "dreams", "sand papers", "bedsheets", "old solid flasks", "buildings", "eye masks", "computers"]
+            const c_rush = ["rush through its furs", "garble roads", "cut its chin", "wrap up its books", "flip through our photos", "upload its life", "upload some gasps", "initiate a talk", "board a flight", "blow into a tube", "divide its own private number"]
+            const c_good = ["another land", "dirty love", "better or worse", "good", "once", "the greater good", "us", "a better world", "what's greener", "the mending of its inner child"]
+            const c_rip = ["rip up", "bring into itself", "guzzle down", "regurgitate", "breathe life into", "re-inflate", "muscle through", "lift up", "peer into", "trip up", "enter into", 'steal']
+            const c_hearts = ['soft and weak hearts', '"bubbly" hearts', 'immaculate code', 'own personal thick clouds', 'dearest pillow', 'very still waters', 'earliest thoughts', "grave tongues", 'single language']
+            const c_horizon = ['the sea', 'a god', 'breath', 'its own rippled line', 'ruby red', 'its own apostrophe', 'dissolve', 'the outer great great past', 'a once-gone feeling', 'a less obvious aries', 'ground']
+
+
+
+            function flip() {
+                document.getElementById('grand').innerHTML = c_grand[Math.floor(Math.random() * c_grand.length)]; 
+                document.getElementById('bird').innerHTML = c_bird[Math.floor(Math.random() * c_bird.length)]; 
+                document.getElementById('go').innerHTML = c_go[Math.floor(Math.random() * c_go.length)];
+                document.getElementById('riled').innerHTML = c_riled[Math.floor(Math.random() * c_riled.length)];
+                document.getElementById('mutters').innerHTML = c_mutters[Math.floor(Math.random() * c_mutters.length)];
+                document.getElementById('goats').innerHTML = c_goats[Math.floor(Math.random() * c_goats.length)];
+                document.getElementById('rush').innerHTML = c_rush[Math.floor(Math.random() * c_rush.length)];
+                document.getElementById('good').innerHTML = c_good[Math.floor(Math.random() * c_good.length)];
+                document.getElementById('rip').innerHTML = c_rip[Math.floor(Math.random() * c_rip.length)];
+                document.getElementById('hearts').innerHTML = c_hearts[Math.floor(Math.random() * c_hearts.length)];
+                document.getElementById('horizon').innerHTML = c_horizon[Math.floor(Math.random() * c_horizon.length)];
+            }
+
+        </script>
+
+        <div id="whole">where did our <span id=grand>grand stuck</span> <span id="bird">holy bird</span> <span id="go">go</span>&mdash;after we <span id=riled>riled</span> its <span id="mutters">mutters</span> and stacked its <span id="goats">turning goats</span>; did it <span id="rush">rush through its furs</span> and leave for <span id="good">good</span>? or did it <span id="rip">rip up</span> our <span id="hearts">soft and weak hearts</span>, meeting <span id="horizon">a rippled horizon</span></div>
+
+        <div id="flipper" onclick=flip() >flip</div>
+
+
+        <div onclick = ss()>screenshot</div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.4/html2canvas.min.js"></script>
+        <script>
+        function ss () {
+        html2canvas(document.getElementById("whole")).then((canvas) => {
+            let a = document.createElement("a");
+            a.download = "ss.png";
+            a.href = canvas.toDataURL("image/png");
+            a.click();
+
+        });}
+        </script>
+
+    </body>
+</html>
