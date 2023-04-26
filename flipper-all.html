@@ -25,44 +25,54 @@
                 right: 1.5vw; 
                 z-index: 10; 
                 white-space: pre; 
+    
+
             }
 
+            .sss {
 
-            /* for all borders shimmering all together */
+                background-color: white;
+            }
 
-            /* .borders {
+            .sss:hover {
+        
+              text-decoration:underline;
+            }
+/* 
+
+            #pink {
                 position: fixed; 
                 top: -6vh; 
                 left: -6vw; 
-                z-index: 100; 
                 width: 111vw; 
                 height: 111vh; 
-                opacity: .3; 
+            }  */
+            #pink {
+                position: fixed; 
+                top: -12vh; 
+                left: -12vw; 
+                width: 124vw; 
+                height: 124vh; 
             } 
 
-            .bordersb {
+            #rainbow, #creepg {
+                position: fixed; 
+                top: -3vh; 
+                left: -3vw; 
+                width: 105vw; 
+                height: 105vh; 
+            } 
+            .borders {
                 position: fixed; 
                 top: 0; 
                 left: 0; 
-                z-index: 100; 
                 width: 100vw; 
                 height: 100vh; 
-                opacity: .3; 
-            }*/
+                /* opacity: .6;  */
+            }
 
-         /* my one favorite border */
 
-         /*.bordersb {
-                position: fixed; 
-                top: 0; 
-                left: 0; 
-                z-index: 100; 
-                width: 100vw; 
-                height: 100vh; 
-            }*/
-/* just to enable sçrolling */
-
-            .bordersb {
+            .back {
                 position: relative; 
                 height: 1200vh; 
                 width: 100vw; 
@@ -72,12 +82,17 @@
         </style>
     </head>
 
-    <body   >
-        <img onclick = flip() class="bordersb" src="borderpink.gif">
+    <body  onload=flip() onscroll="flip(); gifs()">
+        <div onclick = flip() class="back"></div>
+        <!-- <img class="calm" src="calm.gif"> -->
 
-        <!-- <img class="bordersb" src="rainbow.gif">
-        <img class="borders" src="pinkflowers.gif">
-        <img class="borders" src="glitter.gif"> -->
+
+        <img onclick = flip() id="rainbow"  class="borders" src="frames/rainbow.gif">
+        <img onclick = flip() id="pink" class="borders" src="frames/pinkflowers.gif">
+        <img onclick = flip() id="borderp" class="borders" src="frames/borderpink.gif">
+        <img onclick = flip() id="green" class="borders" src="frames/green.gif">
+        <img onclick = flip() id="slowg" class="borders" src="frames/slowg.gif">
+        <!-- <img onclick = flip() id="creepg" class="borders" src="frames/creepg.gif"> -->
     
 
 
@@ -85,7 +100,35 @@
         <div onclick = flip() class="wholes" id="wholeb">(B) where did our <span id=grand>grand stuck</span> <span id="bird">holy bird</span> <span id="go">go</span>&mdash;after we <span id=riled>riled</span> its <span id="mutters">mutters</span> and stacked its <span id="goats">turning goats</span>; did it <span id="rush">rush through its furs</span> and leave for <span id="good">good</span>? or did it <span id="rip">rip up</span> our <span id="hearts">soft and weak hearts</span>, meeting <span id="horizon">a rippled horizon</span></div>
         <div onclick = flip() class="wholes" id="wholec">(C) inside our <span id='train'>whole big train</span> every <span id='shorts'>short skirt</span> <span id='filed'>tucked under</span>, and then found our <span id='past'>flowing past</span>; we didn't <span id ='feel'>feel</span> the <span id ='trees'>trees</span>; we watched <span id=rain>the rain</span> <span id=flow>flow</span> our bellies and helped out the <span id=swans>swans</span> as they <span id=rocked>rocked side to side</span> and our thoughts didn't turn out the way we'd hoped but they <span id=were>were</span> enough to <span id=hold>hold</span> us</div>
         
+
+        <div id="ss">
+            <span class="sss" onclick = ssa()>screenshot (A)</span>
+         <span class="sss" onclick = ssb()>screenshot (B)</span>
+   <span class="sss" onclick = ssc()>screenshot (C)</span></div>
+
           
+
+
+<script>
+let allz = ["3", "4", "5", "6"]
+
+function gifs() {
+            document.getElementById("rainbow").style.zIndex = allz[Math.floor(Math.random() * allz.length * 6)];
+
+            document.getElementById("pink").style.zIndex = allz[Math.floor(Math.random() * allz.length * 6)];
+
+            document.getElementById("borderp").style.zIndex = allz[Math.floor(Math.random() * allz.length * 6)];
+
+            document.getElementById("green").style.zIndex = allz[Math.floor(Math.random() * allz.length * 6)];
+
+            document.getElementById("slowg").style.zIndex = allz[Math.floor(Math.random() * allz.length * 6)];
+            // document.getElementById("creepg").style.zIndex = allz[Math.floor(Math.random() * allz.length * 6)];
+        };
+
+
+
+</script>
+
         <script>
 
 
@@ -166,18 +209,9 @@
                 document.getElementById('hold').innerHTML = c_hold[Math.floor(Math.random() * c_hold.length)]; 
 
                 }
-
         </script>
-        <body onload=flip()></body>
-        <body onscroll=flip()></body>
-        <div id="ss">
-                 <span onclick = ssa()>screenshot (A)</span>
-              <span onclick = ssb()>screenshot (B)</span>
-        <span onclick = ssc()>screenshot (C)</span></div>
-        <!-- <div onclick = ss()>grab hold</div>
-        <div onclick = ss()>swallow</div>
-        <div onclick = ss()>get</div>
-        <div onclick = ss()>swallow</div> -->
+
+
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.4/html2canvas.min.js"></script>
