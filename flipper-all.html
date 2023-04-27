@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <htmL>
     <head>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant&family=Cormorant+Garamond&family=Labrada:wght@100;200&family=Noticia+Text:ital@0;1&family=Playfair+Display&family=Poltawski+Nowy&family=Space+Grotesk:wght@300&family=Spectral:wght@200&display=swap" rel="stylesheet">
@@ -92,10 +92,30 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 
                 width: 99vw; 
                 text-align: center; 
             }
+            .wholes {
+                position: relative; 
+                width: 60vw; 
+                left: 20vw; 
+                top: 45vh;
+                text-align: justify;
+            }
+
+            #wholec {
+                padding-bottom: 45vh; 
+            }
+
+            .back {
+
+                display:none; 
+            }
+
         }
 
         </style>
     </head>
+     <div onclick = flip() class="wholes" id="wholea">(A) how we treated my <span id=nouna>vomiting leaf</span> till it was a<span id=nounb>sycophant</span>: we <span id=verba>tossed it</span>, <span id=verbb>tickled it</span>, set it <span id=adja>free</span>; till it <span id=verbc>rocked</span> our whole world <span id=adjb>flat</span>; till it <span id=verbd>knocked open</span> our <span id=nounc>done topped earth</span> and... we <span id=verbe>ripped</span> all our <span id=nound>petals in shreds</span> </div><br><br>
+        <div onclick = flip() class="wholes" id="wholeb">(B) where did our <span id=grand>grand stuck</span> <span id="bird">holy bird</span> <span id="go">go</span>&mdash;after we <span id=riled>riled up</span> its <span id="mutters">mutters</span> and stacked its <span id="goats">turning goats</span>; did it <span id="rush">rush through its furs</span> and leave for <span id="good">good</span>? or did it <span id="rip">rip up</span> our <span id="hearts">soft and weak hearts</span>, meeting <span id="horizon">a rippled horizon</span></div><br><br>
+        <div onclick = flip() class="wholes" id="wholec">(C) inside our <span id='train'>whole big train</span> every <span id='shorts'>short skirt</span> <span id='filed'>tucked under</span>, and then found our <span id='past'>flowing past</span>; we didn't <span id ='feel'>feel</span> the <span id ='trees'>trees</span>; we watched <span id=rain>the rain</span> <span id=flow>flow</span> our bellies and helped out the <span id=swans>swans</span> as they <span id=rocked>rocked side to side</span> and our thoughts didn't turn out the way we'd hoped but they <span id=were>were</span> enough to <span id=hold>hold</span> us</div>
 
     <body  onload=flip() onscroll="flip(); gifs()">
         <div onclick = flip() class="back"></div>
@@ -109,9 +129,7 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 
 
 
 
-        <div onclick = flip() class="wholes" id="wholea">(A) how we treated my <span id=nouna>vomiting leaf</span> till it was a<span id=nounb>sycophant</span>: we <span id=verba>tossed it</span>, <span id=verbb>tickled it</span>, set it <span id=adja>free</span>; till it <span id=verbc>rocked</span> our whole world <span id=adjb>flat</span>; till it <span id=verbd>knocked open</span> our <span id=nounc>done topped earth</span> and... we <span id=verbe>ripped</span> all our <span id=nound>petals in shreds</span> </div>
-        <div onclick = flip() class="wholes" id="wholeb">(B) where did our <span id=grand>grand stuck</span> <span id="bird">holy bird</span> <span id="go">go</span>&mdash;after we <span id=riled>riled up</span> its <span id="mutters">mutters</span> and stacked its <span id="goats">turning goats</span>; did it <span id="rush">rush through its furs</span> and leave for <span id="good">good</span>? or did it <span id="rip">rip up</span> our <span id="hearts">soft and weak hearts</span>, meeting <span id="horizon">a rippled horizon</span></div>
-        <div onclick = flip() class="wholes" id="wholec">(C) inside our <span id='train'>whole big train</span> every <span id='shorts'>short skirt</span> <span id='filed'>tucked under</span>, and then found our <span id='past'>flowing past</span>; we didn't <span id ='feel'>feel</span> the <span id ='trees'>trees</span>; we watched <span id=rain>the rain</span> <span id=flow>flow</span> our bellies and helped out the <span id=swans>swans</span> as they <span id=rocked>rocked side to side</span> and our thoughts didn't turn out the way we'd hoped but they <span id=were>were</span> enough to <span id=hold>hold</span> us</div>
+       
         
 
         <div id="ss">
@@ -239,6 +257,7 @@ function gifs() {
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.4/html2canvas.min.js"></script>
         <script>
+
         function ssa () {
         html2canvas(document.getElementById("wholea")).then((canvas) => {
             let a = document.createElement("a");
@@ -318,7 +337,9 @@ function gifs() {
 //   var newposY = x/6; $("#wholec").css("transform","translate3d("+newposX+"px,"+newposY+"px,0px)");
 //   });
 
+const isComp = window.matchMedia('(min-width: 600px)')
 
+if (isComp.matches) {
 $(document).on("click mousemove",function(e){ 
   var x = e.clientX;
   var y = e.clientY;
@@ -340,6 +361,8 @@ $(document).on("click mousemove",function(e){
   var newposX = y/6 + y/6;
   var newposY = x/6; $("#wholeb").css("transform","translate3d("+newposX+"px,"+newposY+"px,0px)");
   });
+
+}
 
   
 //   $(".back").click(function(){
