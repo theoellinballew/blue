@@ -4,13 +4,15 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond&family=Labrada:wght@100;200&family=Noticia+Text:ital@0;1&family=Playfair+Display&family=Poltawski+Nowy&family=Space+Grotesk:wght@300&family=Spectral:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant&family=Cormorant+Garamond&family=Labrada:wght@100;200&family=Noticia+Text:ital@0;1&family=Playfair+Display&family=Poltawski+Nowy&family=Space+Grotesk:wght@300&family=Spectral:wght@200&display=swap" rel="stylesheet">
         <style>
             body {
                 /* font-family: 'Cormorant Garamond'; */
-              
-                font-family: 'Spectral';
-                font-size: 12px; 
+                  font-family: 'Spectral';
+                /* font-family: 'Space Grotesk'; */
+                /* font-family: 'Cormorant'; */
+                line-height:18px; 
+                font-size: 15px; 
             }
             
             ::-webkit-scrollbar {
@@ -31,28 +33,14 @@
                 right: 1.5vw; 
                 z-index: 10; 
                 white-space: pre; 
-    
-
             }
 
-            .sss {
-
-                background-color: white;
-            }
 
             .sss:hover {
         
               text-decoration:underline;
             }
-/* 
 
-            #pink {
-                position: fixed; 
-                top: -6vh; 
-                left: -6vw; 
-                width: 111vw; 
-                height: 111vh; 
-            }  */
             #pink {
                 position: fixed; 
                 top: -12vh; 
@@ -74,16 +62,37 @@
                 left: 0; 
                 width: 100vw; 
                 height: 100vh; 
-                /* opacity: .6;  */
+                /* display: none;  */
             }
 
 
             .back {
                 position: relative; 
-                height: 1200vh; 
+                height: 2400vh; 
                 width: 100vw; 
                 opacity:.0001; 
+                /* background: rgb(200, 28, 28);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 93%, rgba(0,0,0,1) 100%); */
             }
+
+ @media (max-width: 600px) {
+            .borders {
+                display: inline; 
+            }
+
+            .sss {
+                background-color: white;
+            }
+
+            #ss {
+                position: fixed; 
+                bottom: 1.5vh; 
+                z-index: 10; 
+                white-space: normal; 
+                width: 99vw; 
+                text-align: center; 
+            }
+        }
 
         </style>
     </head>
@@ -92,17 +101,12 @@
         <div onclick = flip() class="back"></div>
 
 
-        <!-- <img onclick = flip() id="rainbow"  class="borders" src="frames/rainbow.gif">
+        <img onclick = flip() id="rainbow"  class="borders" src="frames/rainbow.gif">
         <img onclick = flip() id="pink" class="borders" src="frames/pinkflowers.gif">
         <img onclick = flip() id="borderp" class="borders" src="frames/borderpink.gif">
-       
-        <img onclick = flip() id="slowg" class="borders" src="frames/slowg.gif">-->
- <img onclick = flip() id="green" class="borders" src="frames/green.gif"> 
+        <img onclick = flip() id="slowg" class="borders" src="frames/slowg.gif">
+        <img onclick = flip() id="green" class="borders" src="frames/green.gif">
 
-
-        
-        <!-- <img onclick = flip() id="creepg" class="borders" src="frames/creepg.gif"> -->
-    
 
 
         <div onclick = flip() class="wholes" id="wholea">(A) how we treated my <span id=nouna>vomiting leaf</span> till it was a<span id=nounb>sycophant</span>: we <span id=verba>tossed it</span>, <span id=verbb>tickled it</span>, set it <span id=adja>free</span>; till it <span id=verbc>rocked</span> our whole world <span id=adjb>flat</span>; till it <span id=verbd>knocked open</span> our <span id=nounc>done topped earth</span> and... we <span id=verbe>ripped</span> all our <span id=nound>petals in shreds</span> </div>
@@ -112,11 +116,11 @@
 
         <div id="ss">
             <span class="sss" onclick = ssa()>screenshot (A)</span>
-         <span class="sss" onclick = ssb()>screenshot (B)</span>
+          <span class="sss" onclick = ssb()>screenshot (B)</span>
    <span class="sss" onclick = ssc()>screenshot (C)</span></div>
 
           
-
+<!-- MOBILE ONLY  -->
 
 <script>
 let allz = ["3", "4", "5", "6"]
@@ -176,7 +180,7 @@ function gifs() {
 
             const c_train = ['truest trailer', 'massive purse', "dream train", 'hundreth house', 'battleground', 'insect cloud', 'scavenged mirror', 'forest', 'ugly printout', 'biggest city']
             const c_shorts = ['short skirt', 'great hope', 'piece of flower', 'missing comma', 'bit of computation', 'damp giggle', 'sexy curve', 'single saltine', 'single dry throat']
-            const c_filed = ['was tucked away', 'had a blast', 'got wasted', 'went unheard', 'tried to speak', 'got trampled', 'swallowed', 'played and won a game', 'filled a cup', 'wandered around']
+            const c_filed = ['was tucked away', 'had a blast', 'got wasted', 'went unheard', 'tried to speak', 'got trampled', 'swallowed', 'played and won a game', 'filled a cup', 'wandered']
             const c_past = ['flowing past', 'secret mint paste', 'innermost froth', 'farthest streetlight', 'event horizon', 'treasure chest', 'secret transpiler']
             const c_feel = ['feel', 'hold onto', 'read into', 'get into', 'walk past', 'go through', 'get a grasp of', 'eat', 'hear', 'get through to']
             const c_trees = ['trees', 'different genres of gravel', 'harder walls', 'hollow walls', 'piles of brick', 'piles of tiles', 'categorized jewelry', 'marble counter samples', 'wallpaper samples']
