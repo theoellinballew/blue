@@ -7,13 +7,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant&family=Cormorant+Garamond&family=Labrada:wght@100;200&family=Noticia+Text:ital@0;1&family=Playfair+Display&family=Poltawski+Nowy&family=Space+Grotesk:wght@300&family=Spectral:wght@200&display=swap" rel="stylesheet">
         <style>
             body {
-                /* font-family: 'Cormorant Garamond'; */
-                  font-family: 'Spectral';
+                font-family: 'Cormorant Garamond';
+                  /* font-family: 'Spectral'; */
                 /* font-family: 'Space Grotesk'; */
                 /* font-family: 'Cormorant'; */
                 line-height:18px; 
                 font-size: 15px; 
-            }
+                /* background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 70%, rgba(159,255,0,1) 100%);        */
+}
             
             ::-webkit-scrollbar {
                  display: none;
@@ -87,15 +89,16 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 
             #ss {
                 position: fixed; 
                 bottom: 1.5vh; 
+                right:0; 
                 z-index: 10; 
                 white-space: normal; 
-                width: 99vw; 
+                width: 100vw; 
                 text-align: center; 
             }
             .wholes {
                 position: relative; 
                 width: 60vw; 
-                left: 20vw; 
+                left: 18.5vw; 
                 top: 45vh;
                 text-align: justify;
             }
@@ -115,7 +118,7 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 
     </head>
      <div onclick = flip() class="wholes" id="wholea">(A) how we treated my <span id=nouna>vomiting leaf</span> till it was a<span id=nounb>sycophant</span>: we <span id=verba>tossed it</span>, <span id=verbb>tickled it</span>, set it <span id=adja>free</span>; till it <span id=verbc>rocked</span> our whole world <span id=adjb>flat</span>; till it <span id=verbd>knocked open</span> our <span id=nounc>done topped earth</span> and... we <span id=verbe>ripped</span> all our <span id=nound>petals in shreds</span> </div><br><br>
         <div onclick = flip() class="wholes" id="wholeb">(B) where did our <span id=grand>grand stuck</span> <span id="bird">holy bird</span> <span id="go">go</span>&mdash;after we <span id=riled>riled up</span> its <span id="mutters">mutters</span> and stacked its <span id="goats">turning goats</span>; did it <span id="rush">rush through its furs</span> and leave for <span id="good">good</span>? or did it <span id="rip">rip up</span> our <span id="hearts">soft and weak hearts</span>, meeting <span id="horizon">a rippled horizon</span></div><br><br>
-        <div onclick = flip() class="wholes" id="wholec">(C) inside our <span id='train'>whole big train</span> every <span id='shorts'>short skirt</span> <span id='filed'>tucked under</span>, and then found our <span id='past'>flowing past</span>; we didn't <span id ='feel'>feel</span> the <span id ='trees'>trees</span>; we watched <span id=rain>the rain</span> <span id=flow>flow</span> our bellies and helped out the <span id=swans>swans</span> as they <span id=rocked>rocked side to side</span> and our thoughts didn't turn out the way we'd hoped but they <span id=were>were</span> enough to <span id=hold>hold</span> us</div>
+        <div onclick = flip() class="wholes" id="wholec">(C) inside our <span id='train'>whole big train</span> every <span id='shorts'>short skirt</span> <span id='filed'>tucked under</span>, and then found our <span id='past'>flowing past</span>; we didn't <span id ='feel'>feel</span> the <span id ='trees'>trees</span>; we watched <span id=rain>the rain</span> <span id=flow>flow</span> our bellies and helped the <span id=swans>swans</span> as they <span id=rocked>rocked side to side</span> and our thoughts didn't turn out the way we'd hoped but they <span id=were>were</span> enough to <span id=hold>hold</span> us</div>
 
     <body  onload=flip() onscroll="flip(); gifs()">
         <div onclick = flip() class="back"></div>
@@ -168,11 +171,7 @@ function gifs() {
             var varverba = ["tossed it","rigged it to a school chair", "riled it up", "filled it with cream", "drew closed its shutters", "opened its mouth", "filled its gut", "rounded its corners", "called its mother", "texted its brother", "filled it in"]
             var varverbb = ["wrapped its wound", "wrapped its candies", "glittered its cheeks", "filed away its energies", "scraped its hard spots", "grew its tongues", "wronged its ears", "gilded its poles", "compiled its stats", "gave it a tip", "looked it up"]
             var varadja = ["free", "swinging", "tilted", "pretty", "true", "perched","still", "rocking", "rolling", "spinning", "in gold", "on a table", "into a hole", "onto the wind", "up", "in stone", "into breath", "down"]
-
-
             var varverbc =["rocked and rolled", "ground down", "minced", "ran", "coughed up", "curled", "shook", "plunged", "time-traveled"]
-
-
             var varadjb = ["into the sea", "so it became purple", "into my heart", 'onto astroturf', 'into my little-girl canned soup', "toward America", "on " + Date(),"into the foliage", "across my hip", "toward the sleepless morning hours", "through heartbreak", "past sleeplessness", "past heartbreak", "through illness, health", "past tragedy"]
 
 
@@ -184,7 +183,7 @@ function gifs() {
             
             
             
-            const c_grand = ["grand stuck", "holy thick", "rounded and hurt", "tired", "grown-up", "temporary", "love-bombing", "interested", "unnamed and wretched", "sad and sunken", "soft and salted", "midnight"]
+            const c_grand = ["grand stuck", "thick", "rounded and hurt", "tired", "grown-up", "temporary", "love-bombing", "interested", "unnamed and wretched", "sad and sunken", "soft and salted", "midnight"]
             const c_bird = ["holy bird", "(foaming) drink", "(holy) milk", "(preaching) gut", "credit line", "(fuller) gut", "blue-light-resistant glass pane", "headphone", "(fucked) brain", "gluten-free heart"]
             const c_go = ["go", "slip off to", "fill itself", "reach its inner light", "get so uptight", "suck its ginger", "dry out its skin", "inspire masses", "fold its hands", "run through the grasses", "read into our hearts"]
             const c_riled = ["riled up", "sold", "sent out", "tucked away", "skimmed", "graphed", "overturned", "translated", "inserted ourselves into", "crowned", "looked into the heart of"]
@@ -196,15 +195,15 @@ function gifs() {
             const c_hearts = ['soft and weak hearts', '"bubbly" hearts', 'immaculate code', 'very own thick clouds', 'dearest pillow', 'very still waters', 'earliest thoughts', "gravest tongues", 'single language']
             const c_horizon = ['the sea', 'a god', 'breath', 'its own rippled line', 'ruby red', 'its own apostrophe', 'dissolve', 'the outer great great past', 'a once-gone feeling', 'a less obvious land', 'ground']
 
-            const c_train = ['truest trailer', 'massive purse', "dream train", 'hundreth house', 'battleground', 'insect cloud', 'scavenged mirror', 'forest', 'ugly printout', 'biggest city']
-            const c_shorts = ['short skirt', 'great hope', 'piece of flower', 'missing comma', 'bit of computation', 'damp giggle', 'sexy curve', 'single saltine', 'single dry throat']
+            const c_train = ['truest trailer', 'massive purse', "long train", 'hundreth house', 'private war', 'insect cloud', 'scavenged mirror', 'forest', 'ugly printout', 'biggest city']
+            const c_shorts = ['skirt scrap', 'great hope', 'piece of flower', 'lost piece of punctuation', 'byte', 'damp laugh', 'sexy lump', 'saltine-speckled wrist', 'dry throat']
             const c_filed = ['was tucked away', 'had a blast', 'got wasted', 'went unheard', 'tried to speak', 'got trampled', 'swallowed', 'played and won a game', 'filled a cup', 'wandered']
-            const c_past = ['flowing past', 'secret mint paste', 'innermost froth', 'farthest streetlight', 'event horizon', 'treasure chest', 'secret transpiler']
+            const c_past = ['flowing past', 'private mint toothpaste', 'innermost froth', 'farthest streetlight', 'event horizon', 'treasure chest', 'secret transpiler']
             const c_feel = ['feel', 'hold onto', 'read into', 'get into', 'walk past', 'go through', 'get a grasp of', 'eat', 'hear', 'get through to']
             const c_trees = ['trees', 'different genres of gravel', 'harder walls', 'hollow walls', 'piles of brick', 'piles of tiles', 'categorized jewelry', 'marble counter samples', 'wallpaper samples']
             const c_rain =['the rain', 'the centuries', 'our children', 'the greatest minds', 'some slugs', "our handiwork", 'a primadonna', 'some sounds']
-            const c_flow =['flow into', 'skim over', 'berate', 'empty', 'ripple', 'line', 'swell', 'make homes of', 'brew sodas in', 'see through', 'get lost in']
-            const c_swans =['swans', 'leaves', 'gentiles', 'tricksters', 'grooms', 'winds', 'willows', 'large lakes', 'new doors']
+            const c_flow =['flow into', 'trip over', 'berate', 'empty', 'ripple', 'line', 'swell', 'make homes of', 'brew sodas in', 'see through', 'get lost in']
+            const c_swans =['swans', 'leaves', 'dreams', 'tricksters', 'grooms', 'winds', 'willows', 'large lakes', 'new doors']
             const c_rocked = ['rocked side to side', 'looked for the right fit', 'wrestled with fate', 'chugged down rivers', 'reached for the sky', 'did their close readings', 'tried to remember']
             const c_were =['were', 'traveled far', 'filled out', 'reached out', 'grew to be', 'stole', 'lasted long', 'shot up tall', 'autofilled']
             const c_hold =['hold', 'get past', 'bind', 'grow', 'cushion', 'charm', 'scissor through', 'blur', 'curl', 'climb']
