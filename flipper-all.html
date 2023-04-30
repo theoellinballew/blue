@@ -32,8 +32,8 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 7
             #ss {
                 position: fixed; 
                 bottom: 1.5vh; 
-                right: 1.5vw; 
-                z-index: 10; 
+                right: .9vw; 
+                z-index: 200; 
                 white-space: pre; 
             }
 
@@ -51,7 +51,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 7
                 height: 124vh; 
             } 
 
-            #rainbow, #creepg {
+            #rainbow, #creepg, #sixth {
                 position: fixed; 
                 top: -3vh; 
                 left: -3vw; 
@@ -78,14 +78,26 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 7
 background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 93%, rgba(0,0,0,1) 100%); */
             }
 
+            .sss {
+                background-color: white;
+                /* text-shadow: 3px 3px 3px green;  */
+            }
+
+            #corner {
+                z-index: 199; 
+                width: 42vw; 
+                bottom: -12vw; 
+                right: -6vw; 
+
+                position: fixed; 
+            }
+
  @media (max-width: 600px) {
             .borders {
                 display: inline; 
             }
 
-            .sss {
-                background-color: white;
-            }
+    
 
             #ss {
                 position: fixed; 
@@ -129,6 +141,8 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 
         <img onclick = flip() id="borderp" class="borders" src="frames/borderpink.gif">
         <img onclick = flip() id="slowg" class="borders" src="frames/slowg.gif">
         <img onclick = flip() id="green" class="borders" src="frames/green.gif">
+        <!-- <img onclick = flip() id="sixth" class="borders" src="frames/sixth.gif"> -->
+        <!-- <img id="corner" src="frames/corner.gif"> -->
 
 
 
@@ -156,6 +170,7 @@ function gifs() {
             document.getElementById("green").style.zIndex = allz[Math.floor(Math.random() * allz.length * 6)];
 
             document.getElementById("slowg").style.zIndex = allz[Math.floor(Math.random() * allz.length * 6)];
+            // document.getElementById("sixth").style.zIndex = allz[Math.floor(Math.random() * allz.length * 6)];
             // document.getElementById("creepg").style.zIndex = allz[Math.floor(Math.random() * allz.length * 6)];
         };
 
@@ -365,7 +380,7 @@ $(document).on("click mousemove",function(e){
 
   
   $(".back").click(function(){
-  $(".borders").toggle();
+  $(".borders, #corner").toggle();
 });
 
   </script>
