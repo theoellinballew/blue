@@ -64,7 +64,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 7
                 left: 0; 
                 width: 100vw; 
                 height: 100vh; 
-                display: none; 
+                /* display: none;  */
             }
 
 
@@ -73,6 +73,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 7
                 height: 2400vh; 
                 width: 100vw; 
                 opacity:.0001; 
+                z-index: 100; 
                 /* background: rgb(200, 28, 28);
 background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 93%, rgba(0,0,0,1) 100%); */
             }
@@ -108,7 +109,6 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 
             }
 
             .back {
-
                 display:none; 
             }
 
@@ -121,8 +121,8 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 
         <div onclick = flip() class="wholes" id="wholec">(C) inside our <span id='train'>whole big train</span> every <span id='shorts'>short skirt</span> <span id='filed'>tucked under</span>, and then found our <span id='past'>flowing past</span>; we didn't <span id ='feel'>feel</span> the <span id ='trees'>trees</span>; we watched <span id=rain>the rain</span> <span id=flow>flow</span> our bellies and helped the <span id=swans>swans</span> as they <span id=rocked>rocked side to side</span> and our thoughts didn't turn out the way we'd hoped but they <span id=were>were</span> enough to <span id=hold>hold</span> us</div>
 
     <body  onload=flip() onscroll="flip(); gifs()">
-        <div onclick = flip() class="back"></div>
-
+        <!-- <div onclick = flip() class="back"></div> -->
+        <div class="back"></div>
 
         <img onclick = flip() id="rainbow"  class="borders" src="frames/rainbow.gif">
         <img onclick = flip() id="pink" class="borders" src="frames/pinkflowers.gif">
@@ -176,10 +176,10 @@ function gifs() {
 
 
 
-            var varverbd = ["knocked open", "locked shut", 'stuffed full', "rippled", 'dragged to death', 'hotglued together', 'sold','ad libbed', 'had talked through', 'had devoured', 'announced', 'had filed down', 'crowned', 'broke down', 'garbled', 'had wrung out']
-            var varnounc = ['topped-off earth','red robin', 'many red belts', 'two great guests', 'itsy week', 'deflating breast', 'long wait', 'interim boss', 'unacceptable wages', 'broken broken thing', 'empty morning hours without the one we love', 'realism', 'wretched moth-eaten toys', 'morning glory']
+            var varverbd = ["knocked open", "locked shut", 'stuffed full', "rippled", 'dragged to death', 'hotglued together', 'had sold off every speck of','ad libbed', 'had talked through', 'had devoured', 'flung out', 'had filed down', 'crowned', 'broke down', 'garbled', 'had wrung out']
+            var varnounc = ['topped-off soil','red robin', 'many red belts', 'two great guests', 'itsy week', 'deflating breast', 'long wait', 'interim boss', 'unacceptable wages', 'broken broken thing', 'empty morning hours without the one we love', 'realism', 'wretched moth-eaten toys', 'morning glory']
             var varverbe = ['remembered', "couldn't weather", 'fell into', 'called up', 'gave a break to', 'got lost in', 'thought back to', 'reflected back', 'sunk into', 'wrapped arms around', 'gave up on' ]
-            var varnound = ['ferns in shreds', 'faces in dirt', 'little rains', 'thick inner sides', 'tired propagations', "car parts we'd torn off our beloved car", 'truncated mournings', 'refusals of sadness', 'last resources for sadness', 'grand imaginings', 'tired tree-lined honors', 'shoulder-length thoughts']
+            var varnound = ['ferns in shreds', 'faces in dirt', 'little rains', 'thick inner sides', 'tired propagations', "car parts (torn off our beloved car)", 'truncated mournings', 'refusals of sadness', 'last resources for sadness', 'grand imaginings', 'tired tree-lined honors', 'shoulder-length thoughts']
             
             
             
@@ -364,9 +364,9 @@ $(document).on("click mousemove",function(e){
 }
 
   
-//   $(".back").click(function(){
-//   $(".borders").hide();
-// });
+  $(".back").click(function(){
+  $(".borders").toggle();
+});
 
   </script>
 
