@@ -31,8 +31,9 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 7
 
             #ss {
                 position: fixed; 
-                bottom: 1.5vh; 
-                right: .9vw; 
+                bottom: .6vw; 
+                /* right: .9vw;  */
+                right: 3.3vw; 
                 z-index: 200; 
                 white-space: pre; 
             }
@@ -92,6 +93,17 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 
                 position: fixed; 
             }
 
+            .tab {
+                right: 0px; 
+                background-color: black;
+                z-index: 300; 
+                bottom: 3vh; 
+                width: 3vw;
+                height: 25vh; 
+                position: fixed; 
+
+            }
+
  @media (max-width: 600px) {
             .borders {
                 display: inline; 
@@ -135,6 +147,7 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 
     <body  onload=flip() onscroll="flip(); gifs()">
         <!-- <div onclick = flip() class="back"></div> -->
         <div class="back"></div>
+        <div class="tab"></div>
 
         <img onclick = flip() id="rainbow"  class="borders" src="frames/rainbow.gif">
         <img onclick = flip() id="pink" class="borders" src="frames/pinkflowers.gif">
@@ -151,8 +164,8 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,251,193,1) 
 
         <div id="ss">
             <span class="sss" onclick = ssa()>screenshot (A)</span>
-          <span class="sss" onclick = ssb()>screenshot (B)</span>
-   <span class="sss" onclick = ssc()>screenshot (C)</span></div>
+      <span class="sss" onclick = ssb()>screenshot (B)</span>
+<span class="sss" onclick = ssc()>screenshot (C)</span></div>
 
           
 <!-- MOBILE ONLY  -->
