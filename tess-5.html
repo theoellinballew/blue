@@ -37,7 +37,7 @@
 
     #present {
         top: 42vh; 
-        left: 57vw; 
+        left: 60vw; 
     }
 
     /* #back {
@@ -72,9 +72,9 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
-<!-- <script>
+<script>
     alert("feel your keyboard"); 
-</script> -->
+</script>
 <script>
 var canvas;
 
@@ -100,7 +100,7 @@ function keyPressed()
 
 //     past
 {
-    noStroke(); 
+    stroke(color(0));
     randFill_r = Math.floor(Math.random() * 5 + 20);
     randFill_g = Math.floor(Math.random() * 200);
     randFill_b = Math.floor(Math.random() * 300);
@@ -114,7 +114,7 @@ function keyPressed()
 
   //     tess
   {
-    noStroke(); 
+    stroke(color(0));
     randFill_r = Math.floor(Math.random() * 5 + 20);
     randFill_g = Math.floor(Math.random() * 200);
     randFill_b = Math.floor(Math.random() * 300);
@@ -128,7 +128,7 @@ function keyPressed()
 
   //     present
 {
-    noStroke(); 
+    stroke(color(0));
     randFill_r = Math.floor(Math.random() * 5 + 20);
     randFill_g = Math.floor(Math.random() * 200);
     randFill_b = Math.floor(Math.random() * 300);
