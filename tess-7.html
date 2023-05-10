@@ -1,0 +1,244 @@
+<!doctype html >
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Bungee+Outline&family=Cinzel&family=Cormorant&family=Cormorant+Garamond&family=Labrada:wght@100;200&family=Noticia+Text:ital@0;1&family=Playfair+Display&family=Poltawski+Nowy&family=Space+Grotesk:wght@300&family=Spectral:wght@200&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    font-family: Bungee Hairline; 
+}
+
+    .headers {
+        font-family: Bungee Hairline; 
+        position: fixed; 
+        color: white; 
+        /* color: white; 
+        text-shadow: 1px 1px  black;  */
+        font-size: 18px; 
+    }
+
+    .headers:hover{
+        font-family: Bungee Outline; 
+    }
+    
+    #tess {
+        top: 18vh; 
+        left: 48vw; 
+    }
+
+    #past {
+        top: 35vh; 
+        left: 35vw; 
+    }
+
+    #present {
+        top: 42vh; 
+        left: 60vw; 
+    }
+
+    /* #back {
+        position: fixed; 
+        left: -1vw; 
+        top: -1vh; 
+        height: 102vh; 
+        z-index: -100; 
+    } */
+
+
+    #back {
+        position: fixed; 
+        left: 20vw; 
+        bottom: 20vw; 
+        width: 60vw; 
+        height: 60vh; 
+        z-index: -100; 
+        border: 1px solid black; 
+        /* border-radius: 50%;  */
+    }
+
+    .texts {
+        position: fixed; 
+        top:54vh; ; 
+        /* background-color: blue;  */
+        background-color: white; 
+        z-index: 1000; 
+        /* color: white;  */
+        width: 41vw; 
+        left: 12vw; 
+        padding: 3vw; 
+        font-size: 15px; 
+        font-family: 'Cormorant Garamond';
+        border: 1px solid black; 
+    }
+
+    #feel {
+        position: fixed; 
+        right: 20vw; 
+        bottom: 18vw; 
+        z-index: 1000; 
+        color: black; 
+    }
+
+</style>
+</head>
+<body>
+
+<div id="feel">feel your keyboard</div>
+<p class="texts" id="pasttext">
+link to Lite Year: https://fenceportal.org/book/lite-year/<br><br>
+Sidewalk Ends : would love to post a selection of ?10 photos from my archive and/or the link to our instagram - our website is defunct https://www.instagram.com/sidewalkendsfarm/?hl=en<br><br>
+Mother Tongue : https://mothert0ngue.bandcamp.com/album/tread-on-me</p>
+
+<!-- 
+<p class="texts" id="presenttext">
+    plan A: place to upload three rotating pdfs <br><br>
+    plan B: link to document of current work  
+</p>
+
+<p class="texts" id="biotext"> Tess Brown-Lavoie is author of Lite Year, winner of the Fence Modern Poet Series Prize. Tess co-founded Sidewalk Ends Farm in 2011, and was recently the Anne Waldman Fellow at Naropa University. Tess teaches at Pratt. 
+<br><br>
+
+    contact tessbrownlavoie | at | gmail | dot | com     [and/or message box as discussed that will spit out to my email]
+
+</p> -->
+
+<div class="headers" id="tess">TESS BROWN-LAVOIE</div>
+<div class="headers" id="past">PAST</div>
+<div class="headers" id="present">PRESENT</div>
+<!-- <img id="back" src="img.png"> -->
+<img id="back" src="vibra.gif">
+
+
+<script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+<!-- <script>
+    alert("feel your keyboard"); 
+</script> -->
+<script>
+var canvas;
+
+function setup() {
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0,0);
+  canvas.style('position', 'fixed');
+  rectWidth = width / 12;
+  canvas.style('z-index', '-10');
+}
+
+
+
+function keyPressed() 
+
+{
+  
+  
+   
+    
+
+
+
+//     past
+{
+    stroke(color(0));
+    randFill_r = Math.floor(Math.random() * 5 + 20);
+    randFill_g = Math.floor(Math.random() * 200);
+    randFill_b = Math.floor(Math.random() * 300);
+    fill(randFill_r, randFill_g, randFill_b);
+    let x = width/15*5 + Math.floor(Math.random() * 39);
+    let y = height/3 + Math.floor(Math.random() * 6);
+    rect(x, y, width/12, 30, 21, 9, 12, 3);
+  
+  }
+
+
+  //     tess
+  {
+    stroke(color(0));
+    randFill_r = Math.floor(Math.random() * 5 + 20);
+    randFill_g = Math.floor(Math.random() * 200);
+    randFill_b = Math.floor(Math.random() * 300);
+    fill(randFill_r, randFill_g, randFill_b);
+    let x = width/15*7 + Math.floor(Math.random() * 39);
+    let y = height/6 + Math.floor(Math.random() * 6);
+    rect(x, y, width/6, 30, 21, 9, 12, 3);
+  
+  }
+
+
+  //     present
+{
+    stroke(color(0));
+    randFill_r = Math.floor(Math.random() * 5 + 20);
+    randFill_g = Math.floor(Math.random() * 200);
+    randFill_b = Math.floor(Math.random() * 300);
+    fill(randFill_r, randFill_g, randFill_b);
+    // let x = width/15*9 + Math.floor(Math.random() * 39);
+    let x = width/15*8.5 + Math.floor(Math.random() * 39);
+    let y = height/6*2.5 + Math.floor(Math.random() * 6);
+    rect(x, y, width/9, 30, 21, 9, 12, 3);
+  
+  }
+  
+
+  
+//    big squares
+  
+  { 
+    stroke(color(0));
+    noFill();
+    let y = height/3 + Math.floor(Math.random() * height);
+    let x = width/15*5 + Math.floor(Math.random() * 6);
+    rect(x, y, width/15, 80, 21);
+   
+  }
+  
+
+  // random border radius 
+  { 
+
+    stroke(color(0));
+    
+    noFill();
+    let y = height/6 + Math.floor(Math.random() * height);
+    let x = width/15*7 + Math.floor(Math.random() * 6);
+    let h = 9 + Math.floor(Math.random() * 75);
+   let a = 3 + Math.floor(Math.random() * 15);
+   let b = 3 + Math.floor(Math.random() * 15);
+   let c = 3 + Math.floor(Math.random() * 15);
+   let d = 3 + Math.floor(Math.random() * 15);
+    rect(x, y, width/15, h, a, b, c, d);
+   
+  }
+
+  
+  
+//    circles
+  
+{ 
+    stroke(color(0));
+    noFill();
+    // let y = height/3 + Math.floor(Math.random() * height);
+    // let x = width/15*9 + Math.floor(Math.random() * 6);
+    let y = height/6*2.5 + Math.floor(Math.random() * height);
+    let x = width/15*8.5 + Math.floor(Math.random() * 6);
+    rect(x, y, width/15, 80, 80);
+   
+  }
+  
+
+
+
+
+  
+
+}
+</script>
+
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+
+</body>
+
+</html>
