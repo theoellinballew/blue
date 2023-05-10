@@ -1,0 +1,191 @@
+<!doctype html >
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Bungee+Outline&family=Cinzel&family=Cormorant&family=Cormorant+Garamond&family=Labrada:wght@100;200&family=Noticia+Text:ital@0;1&family=Playfair+Display&family=Poltawski+Nowy&family=Space+Grotesk:wght@300&family=Spectral:wght@200&display=swap" rel="stylesheet">
+
+<style>
+
+
+    body {
+  
+    }
+
+    .headers {
+        font-family: Bungee Hairline; 
+        position: fixed; 
+        color: white; 
+        /* color: white; 
+        text-shadow: 1px 1px  black;  */
+        font-size: 18px; 
+    }
+
+    .headers:hover{
+        font-family: Bungee Outline; 
+    }
+    
+    #tess {
+        top: 18vh; 
+        left: 48vw; 
+    }
+
+    #past {
+        top: 35vh; 
+        left: 35vw; 
+    }
+
+    #present {
+        top: 42vh; 
+        left: 57vw; 
+    }
+
+    #back {
+        position: fixed; 
+        left: -1vw; 
+        top: -1vh; 
+        height: 102vh; 
+        z-index: -100; 
+    }
+
+</style>
+</head>
+<body>
+
+<div class="headers" id="tess">TESS BROWN-LAVOIE</div>
+<div class="headers" id="past">PAST</div>
+<div class="headers" id="present">PRESENT</div>
+<!-- <img id="back" src="img.png"> -->
+<img id="back" src="vibra.gif">
+
+
+<script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+<script>
+    alert("feel your keyboard"); 
+</script>
+<script>
+var canvas;
+
+function setup() {
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0,0);
+  canvas.style('position', 'fixed');
+  rectWidth = width / 12;
+  canvas.style('z-index', '-10');
+}
+
+
+
+function keyPressed() 
+
+{
+  
+  
+   
+    
+
+
+
+//     past
+{
+    noStroke(); 
+    randFill_r = Math.floor(Math.random() * 5 + 20);
+    randFill_g = Math.floor(Math.random() * 200);
+    randFill_b = Math.floor(Math.random() * 300);
+    fill(randFill_r, randFill_g, randFill_b);
+    let x = width/15*5 + Math.floor(Math.random() * 39);
+    let y = height/3 + Math.floor(Math.random() * 6);
+    rect(x, y, width/12, 30, 21, 9, 12, 3);
+  
+  }
+
+
+  //     tess
+  {
+    noStroke(); 
+    randFill_r = Math.floor(Math.random() * 5 + 20);
+    randFill_g = Math.floor(Math.random() * 200);
+    randFill_b = Math.floor(Math.random() * 300);
+    fill(randFill_r, randFill_g, randFill_b);
+    let x = width/15*7 + Math.floor(Math.random() * 39);
+    let y = height/6 + Math.floor(Math.random() * 6);
+    rect(x, y, width/6, 30, 21, 9, 12, 3);
+  
+  }
+
+
+  //     present
+{
+    noStroke(); 
+    randFill_r = Math.floor(Math.random() * 5 + 20);
+    randFill_g = Math.floor(Math.random() * 200);
+    randFill_b = Math.floor(Math.random() * 300);
+    fill(randFill_r, randFill_g, randFill_b);
+    // let x = width/15*9 + Math.floor(Math.random() * 39);
+    let x = width/15*8.5 + Math.floor(Math.random() * 39);
+    let y = height/6*2.5 + Math.floor(Math.random() * 6);
+    rect(x, y, width/9, 30, 21, 9, 12, 3);
+  
+  }
+  
+
+  
+//    big squares
+  
+  { 
+    stroke(color(0));
+    noFill();
+    let y = height/3 + Math.floor(Math.random() * height);
+    let x = width/15*5 + Math.floor(Math.random() * 6);
+    rect(x, y, width/15, 80, 21);
+   
+  }
+  
+
+  // random border radius 
+  { 
+
+    stroke(color(0));
+    
+    noFill();
+    let y = height/6 + Math.floor(Math.random() * height);
+    let x = width/15*7 + Math.floor(Math.random() * 6);
+    let h = 9 + Math.floor(Math.random() * 75);
+   let a = 3 + Math.floor(Math.random() * 15);
+   let b = 3 + Math.floor(Math.random() * 15);
+   let c = 3 + Math.floor(Math.random() * 15);
+   let d = 3 + Math.floor(Math.random() * 15);
+    rect(x, y, width/15, h, a, b, c, d);
+   
+  }
+
+  
+  
+//    circles
+  
+{ 
+    stroke(color(0));
+    noFill();
+    // let y = height/3 + Math.floor(Math.random() * height);
+    // let x = width/15*9 + Math.floor(Math.random() * 6);
+    let y = height/6*2.5 + Math.floor(Math.random() * height);
+    let x = width/15*8.5 + Math.floor(Math.random() * 6);
+    rect(x, y, width/15, 80, 80);
+   
+  }
+  
+
+
+
+
+  
+
+}
+</script>
+
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+
+</body>
+
+</html>
