@@ -1,0 +1,195 @@
+<html>
+    <head>
+        <style>
+            html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0px;
+  background: white;
+}
+
+.spiral {
+    position: relative; 
+    /* width: 8vw;  */
+    width: 14vw;
+    opacity: .0003; 
+    background-color: white; 
+
+}
+
+/* #spiral:hover{
+    background-color: blue; 
+    opacity: .3; 
+} */
+#center {
+    z-index: 100;
+    position: fixed; 
+    width: 100vw; 
+    text-align: center; 
+    top: 42vh; 
+    font-size: 6vw; 
+}
+
+        </style>
+    </head>
+    <body onload=flip()>
+        <div id=center>one</div>
+<img onmouseover=a() id="a" class="spiral" src="spiral.png">
+<img onmouseover=b() id="b" class="spiral" src="spiral.png">
+<img onmouseover=c() id="c"  class="spiral" src="spiral.png">
+<img onmouseover=d() id="d" class="spiral" src="spiral.png">
+<img onmouseover=e() id="a" class="spiral" src="spiral.png">
+<img onmouseover=f() id="b" class="spiral" src="spiral.png">
+<img onmouseover=g() id="c"  class="spiral" src="spiral.png">
+<img onmouseover=h() id="d" class="spiral" src="spiral.png">
+<img onmouseover=i() id="a" class="spiral" src="spiral.png">
+<img onmouseover=j() id="b" class="spiral" src="spiral.png">
+<img onmouseover=k() id="c"  class="spiral" src="spiral.png">
+<img onmouseover=l() id="d" class="spiral" src="spiral.png">
+<img onmouseover=m() id="a" class="spiral" src="spiral.png">
+<img onmouseover=n() id="b" class="spiral" src="spiral.png">
+<img onmouseover=o() id="c"  class="spiral" src="spiral.png">
+<img onmouseover=p() id="d" class="spiral" src="spiral.png">
+<img onmouseover=q() id="a" class="spiral" src="spiral.png">
+<img onmouseover=r() id="b" class="spiral" src="spiral.png">
+<img onmouseover=s() id="c"  class="spiral" src="spiral.png">
+<img onmouseover=t() id="d" class="spiral" src="spiral.png">
+<img onmouseover=u() id="a" class="spiral" src="spiral.png">
+<img onmouseover=v() id="b" class="spiral" src="spiral.png">
+<img onmouseover=w() id="c"  class="spiral" src="spiral.png">
+<img onmouseover=x() id="d" class="spiral" src="spiral.png">
+<img onmouseover=y() id="a" class="spiral" src="spiral.png">
+<img onmouseover=z() id="b" class="spiral" src="spiral.png">
+<img onmouseover=aa() id="c"  class="spiral" src="spiral.png">
+<img onmouseover=bb() id="d" class="spiral" src="spiral.png">
+
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+
+    <script>
+    
+    function setup() {
+        createCanvas(windowWidth, windowHeight);
+        background(255);
+      }
+
+
+function windowResized () {
+  resizeCanvas(windowWidth, windowHeight); 
+  background(255);
+}
+      
+      function draw() {
+        ellipse(mouseX, mouseY, pmouseX/12, pmouseY/12);
+        fill(0);
+      }
+
+     </script>
+
+<script>
+
+function a () {
+                document.getElementById("center").innerHTML = "a"; 
+       }
+
+       function b () {
+                document.getElementById("center").innerHTML = "b"; 
+       }
+       function c () {
+                document.getElementById("center").innerHTML = "c"; 
+       }
+
+
+       function d () {
+                document.getElementById("center").innerHTML = "d"; 
+       }
+
+       function e () {
+                document.getElementById("center").innerHTML = "e"; 
+       }
+       function f () {
+                document.getElementById("center").innerHTML = "f"; 
+       }
+       function g () {
+                document.getElementById("center").innerHTML = "a"; 
+       }
+
+       function h () {
+                document.getElementById("center").innerHTML = "kjshfk"; 
+       }
+       function i () {
+                document.getElementById("center").innerHTML = "c"; 
+       }
+       function j () {
+                document.getElementById("center").innerHTML = "sdkfh"; 
+       }
+
+       function k () {
+                document.getElementById("center").innerHTML = "b"; 
+       }
+       function l () {
+                document.getElementById("center").innerHTML = "once upon"; 
+       }
+       function m () {
+                document.getElementById("center").innerHTML = "a"; 
+       }
+
+       function n () {
+                document.getElementById("center").innerHTML = "a time there was"; 
+       }
+       function o () {
+                document.getElementById("center").innerHTML = "willowing"; 
+       }
+       function p () {
+                document.getElementById("center").innerHTML = "big"; 
+       }
+
+       function q () {
+                document.getElementById("center").innerHTML = "tall"; 
+       }
+       function r () {
+                document.getElementById("center").innerHTML = "once"; 
+       }
+       function s () {
+                document.getElementById("center").innerHTML = "filled"; 
+       }
+
+       function t () {
+                document.getElementById("center").innerHTML = "weary"; 
+       }
+       function u () {
+                document.getElementById("center").innerHTML = "full"; 
+       }
+       function v () {
+                document.getElementById("center").innerHTML = "a"; 
+       }
+
+       function w () {
+                document.getElementById("center").innerHTML = "true"; 
+       }
+       function x () {
+                document.getElementById("center").innerHTML = "c"; 
+       }function y () {
+                document.getElementById("center").innerHTML = "inner"; 
+       }
+
+       function z () {
+                document.getElementById("center").innerHTML = "grand"; 
+       }
+       function aa () {
+                document.getElementById("center").innerHTML = "c"; 
+       }function bb () {
+                document.getElementById("center").innerHTML = "trill"; 
+       }
+
+       
+// const varnouna = [ "vomiting leaf", "wandering trill" , "good dull filler", "really thick curve", "winnowy gullet", "random hearth", "full belly", "California orange", "loud keyboard", "calculating turn", "burgeoning tit", "zinger head"]
+
+//        function flip () {
+//                 document.getElementById("center").innerHTML = varnouna[Math.floor(Math.random() * varnouna.length)]; 
+//        }
+</script>
+
+</html>
